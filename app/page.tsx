@@ -1,9 +1,5 @@
 
 import type { Metadata } from "next";
-import "./globals.css";
-import "./homepage.css";
-import FAQSection from "./FAQSection";
-import SiteFooter from "./SiteFooter";
 
 export const metadata: Metadata = {
   title: "Best B2B Data Provider | Company & Professional Database India",
@@ -47,107 +43,6 @@ const categories = [
 export default function HomePage() {
   return (
     <main className="ref-home">
-
-      {/* TOP PURPLE BAR */}
-      <div className="ref-topbar">
-        <div className="ref-topbar-inner">
-          <strong className="ref-tagline">
-            Leads, Branding, Publicity For Your Business Growth.
-          </strong>
-
-          <div className="ref-topbar-right">
-            <div className="ref-social-links">
-              <a href="#" aria-label="Facebook">f</a>
-              <a href="#" aria-label="X">𝕏</a>
-              <a href="#" aria-label="LinkedIn">in</a>
-              <a href="#" aria-label="Instagram">◎</a>
-              <a href="#" aria-label="YouTube">▶</a>
-            </div>
-
-            <div className="ref-top-links">
-              <a href="/">Home</a>
-              <a href="/about">About Data</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* MAIN WHITE HEADER */}
-      <header className="ref-main-header">
-        <div className="ref-header-inner">
-
-          <a href="/" className="ref-brand">
-            <div className="ref-anniversary">
-              <span className="ref-anniversary-small">YEAR OF</span>
-              <strong>16</strong>
-              <span className="ref-anniversary-th">th</span>
-              <span className="ref-anniversary-bottom">SUCCESS</span>
-            </div>
-
-            <div className="ref-brand-text">
-              <span className="ref-brand-caption">
-                India’s No. 1 B2B Data Provider
-              </span>
-              <strong>Best B2B DATA Provider</strong>
-              <small>(An ISO 9001-2015 Certified Co.)</small>
-            </div>
-          </a>
-
-          <div className="ref-data-titles">
-            <strong>+8</strong>
-            <span>Data Titles</span>
-          </div>
-
-          <div className="ref-trusted">
-            <div>
-              <strong>TRUSTED BY</strong>
-              <b>+8K CLIENTS</b>
-              <span>SINCE-2019</span>
-            </div>
-            <div className="ref-trusted-badge">✓</div>
-          </div>
-
-          <div className="ref-contact-info">
-            <strong className="ref-contact-heading">
-              FOR ANY DATA BUY / FREE SAMPLE
-            </strong>
-            <a href="tel:8587804924">☎ 858782398, 825611614451</a>
-            <a href="mailto:sales@bestb2bdata.com">
-              ✉ sales@bestb2bdata.com
-            </a>
-          </div>
-
-        </div>
-      </header>
-
-      {/* NAVIGATION */}
-      <nav className="ref-navigation">
-        <div className="ref-navigation-inner">
-          <a className="ref-home-icon" href="/">⌂</a>
-          <a href="/company-database">B2B Companies <span>▼</span></a>
-          <a href="/industries">Industries / Companies <span>▼</span></a>
-          <a href="/company-database">City / State Wise Companies <span>▼</span></a>
-          <a href="/b2b-contact-database">Professional / Services Providers <span>▼</span></a>
-          <a href="/company-database">International Buyers & Sellers <span>▼</span></a>
-          <a href="/industries">Exhibitors Data <span>▼</span></a>
-          <a href="/pricing">Super Discounted Bulk Data</a>
-          <a href="/contact">Free Sample Data</a>
-          <a href="/contact">FAQ's</a>
-          <a className="ref-full-data" href="/company-database">Full Data List</a>
-        </div>
-      </nav>
-
-      {/* SPECIAL OFFER */}
-      <section className="ref-offer">
-        <div className="ref-offer-track">
-          <span>
-            SPL. DISCOUNT OFFER - FLAT 30% DISCOUNT ON EVERY DATA PURCHASE - OFFER END SOON
-          </span>
-          <span aria-hidden="true">
-            SPL. DISCOUNT OFFER - FLAT 30% DISCOUNT ON EVERY DATA PURCHASE - OFFER END SOON
-          </span>
-        </div>
-      </section>
 
       {/* MAIN DATA SECTION */}
       <section className="ref-data-section">
@@ -321,7 +216,9 @@ export default function HomePage() {
             for B2B networking and business development.
           </p>
 
-          <h3 className="ref-sample-heading">Professional Services – Sample Records</h3>
+          <h3 className="ref-sample-heading">
+            Professional Services – Sample Records
+          </h3>
 
           <div className="ref-sample-table-wrap">
             <table className="ref-sample-table">
@@ -366,7 +263,9 @@ export default function HomePage() {
             networking.
           </p>
 
-          <h3 className="ref-sample-heading">International Trade – Sample Records</h3>
+          <h3 className="ref-sample-heading">
+            International Trade – Sample Records
+          </h3>
 
           <div className="ref-sample-table-wrap">
             <table className="ref-sample-table">
@@ -410,7 +309,9 @@ export default function HomePage() {
             business expansion activities.
           </p>
 
-          <h3 className="ref-sample-heading">Industry Categories – Sample Records</h3>
+          <h3 className="ref-sample-heading">
+            Industry Categories – Sample Records
+          </h3>
 
           <div className="ref-sample-table-wrap">
             <table className="ref-sample-table">
@@ -440,7 +341,7 @@ export default function HomePage() {
           </a>
         </div>
       </section>
-      
+
       {/* NORTH SOUTH EAST WEST STATE & CITY DATA */}
       <section className="ref-business-content ref-extra-section">
         <h2>State & City Wise B2B Companies Data – India</h2>
@@ -471,81 +372,41 @@ export default function HomePage() {
               </thead>
 
               <tbody>
-                {/* NORTH INDIA */}
                 <tr>
                   <td rowSpan={4}>North India</td>
                   <td>Delhi</td>
                   <td>New Delhi</td>
                 </tr>
-                <tr>
-                  <td>Uttar Pradesh</td>
-                  <td>Noida, Lucknow, Kanpur</td>
-                </tr>
-                <tr>
-                  <td>Haryana</td>
-                  <td>Gurugram, Faridabad</td>
-                </tr>
-                <tr>
-                  <td>Punjab</td>
-                  <td>Ludhiana, Amritsar</td>
-                </tr>
+                <tr><td>Uttar Pradesh</td><td>Noida, Lucknow, Kanpur</td></tr>
+                <tr><td>Haryana</td><td>Gurugram, Faridabad</td></tr>
+                <tr><td>Punjab</td><td>Ludhiana, Amritsar</td></tr>
 
-                {/* SOUTH INDIA */}
                 <tr>
                   <td rowSpan={4}>South India</td>
                   <td>Tamil Nadu</td>
                   <td>Chennai, Coimbatore</td>
                 </tr>
-                <tr>
-                  <td>Karnataka</td>
-                  <td>Bengaluru, Mysuru</td>
-                </tr>
-                <tr>
-                  <td>Telangana</td>
-                  <td>Hyderabad, Warangal</td>
-                </tr>
-                <tr>
-                  <td>Kerala</td>
-                  <td>Kochi, Kozhikode</td>
-                </tr>
+                <tr><td>Karnataka</td><td>Bengaluru, Mysuru</td></tr>
+                <tr><td>Telangana</td><td>Hyderabad, Warangal</td></tr>
+                <tr><td>Kerala</td><td>Kochi, Kozhikode</td></tr>
 
-                {/* WEST INDIA */}
                 <tr>
                   <td rowSpan={4}>West India</td>
                   <td>Maharashtra</td>
                   <td>Mumbai, Pune, Nagpur</td>
                 </tr>
-                <tr>
-                  <td>Gujarat</td>
-                  <td>Ahmedabad, Surat, Vadodara</td>
-                </tr>
-                <tr>
-                  <td>Rajasthan</td>
-                  <td>Jaipur, Jodhpur</td>
-                </tr>
-                <tr>
-                  <td>Goa</td>
-                  <td>Panaji, Margao</td>
-                </tr>
+                <tr><td>Gujarat</td><td>Ahmedabad, Surat, Vadodara</td></tr>
+                <tr><td>Rajasthan</td><td>Jaipur, Jodhpur</td></tr>
+                <tr><td>Goa</td><td>Panaji, Margao</td></tr>
 
-                {/* EAST INDIA */}
                 <tr>
                   <td rowSpan={4}>East India</td>
                   <td>West Bengal</td>
                   <td>Kolkata, Howrah</td>
                 </tr>
-                <tr>
-                  <td>Odisha</td>
-                  <td>Bhubaneswar, Cuttack</td>
-                </tr>
-                <tr>
-                  <td>Bihar</td>
-                  <td>Patna, Gaya</td>
-                </tr>
-                <tr>
-                  <td>Jharkhand</td>
-                  <td>Ranchi, Jamshedpur</td>
-                </tr>
+                <tr><td>Odisha</td><td>Bhubaneswar, Cuttack</td></tr>
+                <tr><td>Bihar</td><td>Patna, Gaya</td></tr>
+                <tr><td>Jharkhand</td><td>Ranchi, Jamshedpur</td></tr>
               </tbody>
             </table>
           </div>
@@ -560,7 +421,7 @@ export default function HomePage() {
           </a>
         </div>
       </section>
-       
+
       {/* SUPER DISCOUNTED BULK DATA PACKAGES */}
       <section className="ref-business-content ref-extra-section ref-bulk-packages">
         <h2>Super Discounted Bulk Data Packages</h2>
@@ -574,7 +435,6 @@ export default function HomePage() {
 
         <div className="ref-package-grid">
 
-          {/* STARTER PACKAGE */}
           <div className="ref-package-card">
             <div className="ref-package-label">STARTER</div>
             <h3>Business Starter</h3>
@@ -593,7 +453,6 @@ export default function HomePage() {
             <a href="/contact">GET A QUOTE</a>
           </div>
 
-          {/* GROWTH PACKAGE */}
           <div className="ref-package-card ref-package-featured">
             <div className="ref-package-label">POPULAR CHOICE</div>
             <h3>Business Growth</h3>
@@ -612,7 +471,6 @@ export default function HomePage() {
             <a href="/contact">GET A QUOTE</a>
           </div>
 
-          {/* ENTERPRISE PACKAGE */}
           <div className="ref-package-card">
             <div className="ref-package-label">ENTERPRISE</div>
             <h3>Bulk Data Solution</h3>
@@ -642,7 +500,7 @@ export default function HomePage() {
           <a href="/contact">CONTACT OUR TEAM →</a>
         </div>
       </section>
-       
+
       {/* OUR DATABASE SECTION */}
       <section className="ref-business-content ref-extra-section ref-our-database">
         <h2>Explore Our Database Solutions</h2>
@@ -734,63 +592,54 @@ export default function HomePage() {
           <a href="/contact">DISCUSS YOUR REQUIREMENTS →</a>
         </div>
       </section>
+
+      {/* CLIENT SECTION */}
       <section className="clients-section">
-  <div className="clients-container">
-    <span className="clients-tag">OUR CLIENT NETWORK</span>
+        <div className="clients-container">
+          <span className="clients-tag">OUR CLIENT NETWORK</span>
 
-    <h2>Some of Our Reputed Clients</h2>
+          <h2>Sample Industry Profiles</h2>
 
-    <p className="clients-description">
-      We aim to support businesses across different industries with
-      reliable B2B data solutions.
-    </p>
+          <p className="clients-description">
+            These illustrative profiles represent the types of industries
+            our B2B data solutions are designed to support.
+          </p>
 
-    <div className="clients-grid">
-      <div className="client-card">
-        <div className="client-logo">NT</div>
-        <h3>NovaTech</h3>
-        <span>Technology</span>
-      </div>
+          <div className="clients-grid">
+            <div className="client-card">
+              <div className="client-logo">NT</div>
+              <h3>NovaTech</h3>
+              <span>Technology</span>
+            </div>
 
-      <div className="client-card">
-        <div className="client-logo">UC</div>
-        <h3>UrbanCart</h3>
-        <span>Retail & E-commerce</span>
-      </div>
+            <div className="client-card">
+              <div className="client-logo">UC</div>
+              <h3>UrbanCart</h3>
+              <span>Retail & E-commerce</span>
+            </div>
 
-      <div className="client-card">
-        <div className="client-logo">AM</div>
-        <h3>Apex Manufacturing</h3>
-        <span>Manufacturing</span>
-      </div>
+            <div className="client-card">
+              <div className="client-logo">AM</div>
+              <h3>Apex Manufacturing</h3>
+              <span>Manufacturing</span>
+            </div>
 
-      <div className="client-card">
-        <div className="client-logo">GF</div>
-        <h3>GreenLeaf Foods</h3>
-        <span>Food & FMCG</span>
-      </div>
+            <div className="client-card">
+              <div className="client-logo">GF</div>
+              <h3>GreenLeaf Foods</h3>
+              <span>Food & FMCG</span>
+            </div>
 
-      <div className="client-card">
-        <div className="client-logo">BE</div>
-        <h3>BrightEdge</h3>
-        <span>Business Services</span>
-      </div>
-    </div>
-  </div>
-</section>
-{/* WEBSITE FOOTER */}
-<SiteFooter />
+            <div className="client-card">
+              <div className="client-logo">BE</div>
+              <h3>BrightEdge</h3>
+              <span>Business Services</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-{/* FLOATING SIDE LINKS */}
-<div className="ref-floating-tabs">
-  <a href="/contact">Free Sample</a>
-  <a href="/company-database">Full Data List</a>
-  <a href="/pricing">Discounted Bulk Data</a>
-</div>
-     
-
-
-      {/* FLOATING SIDE LINKS */}
+      {/* SINGLE FLOATING SIDE LINKS */}
       <div className="ref-floating-tabs">
         <a href="/contact">Free Sample</a>
         <a href="/company-database">Full Data List</a>

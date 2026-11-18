@@ -1,6 +1,6 @@
 
 import type { Metadata } from "next";
-
+import "./blog.css";
 export const metadata: Metadata = {
   title: "B2B Data & Business Growth Blog | Best B2B Data Provider",
   description:

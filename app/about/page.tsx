@@ -1,6 +1,7 @@
 
 import type { Metadata } from "next";
 import AboutContent from "@/components/AboutContent";
+import "./about.css";
 
 export const metadata: Metadata = {
   title: "About Us | B2B Data Provider India",

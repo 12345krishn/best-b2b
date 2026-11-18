@@ -1,6 +1,10 @@
 
 import type { Metadata } from "next";
 import "./globals.css";
+import "./homepage.css";
+
+import SiteHeader from "./SiteHeader";
+import SiteFooter from "./SiteFooter";
 
 export const metadata: Metadata = {
   title: "Best B2B Data Provider | B2B Data Solutions India",
@@ -18,7 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <SiteHeader />
+        {children}
+        <SiteFooter />
+      </body>
     </html>
   );
 }

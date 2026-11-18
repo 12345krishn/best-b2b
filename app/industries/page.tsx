@@ -1,17 +1,18 @@
 
 import type { Metadata } from "next";
+import "./industries.css";
 
 export const metadata: Metadata = {
   title: "Industries We Serve | B2B Data Provider India",
   description:
-    "Explore B2B business data solutions for manufacturing, IT, healthcare, finance, real estate, logistics and other industries in India.",
+    "Explore industry-wise B2B company information and business data solutions for manufacturing, IT, healthcare, finance, real estate, logistics and retail businesses across India.",
   alternates: {
     canonical: "/industries",
   },
   openGraph: {
     title: "Industries We Serve | Best B2B Data Provider",
     description:
-      "Discover industry-focused business data solutions for companies across India.",
+      "Explore business data solutions and industry-wise company information across India.",
     url: "/industries",
     type: "website",
   },
@@ -22,55 +23,195 @@ const industries = [
     number: "01",
     title: "Manufacturing",
     description:
-      "Explore relevant company information to support supplier research, industrial prospecting and business development.",
-    image:
-      "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=900&q=85",
-    alt: "Modern manufacturing facility and industrial production",
+      "Explore business information across manufacturing, industrial production, machinery, engineering and related sectors. Useful for supplier research, industrial prospecting and B2B business development.",
+    coverage:
+      "Manufacturers, Industrial Suppliers, Machinery, Engineering",
   },
   {
     number: "02",
     title: "IT & Technology",
     description:
-      "Understand the technology business landscape and identify relevant companies for B2B research and outreach.",
-    image:
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=85",
-    alt: "Modern technology office workspace",
+      "Understand the technology business landscape and explore relevant companies for software services, IT solutions, digital transformation and professional business outreach.",
+    coverage:
+      "IT Companies, Software Firms, Technology Services, Startups",
   },
   {
     number: "03",
-    title: "Healthcare",
+    title: "Healthcare & Pharmaceuticals",
     description:
-      "Organize business information related to healthcare providers, medical organizations and healthcare businesses.",
-    image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=85",
-    alt: "Healthcare professional working in a medical environment",
+      "Explore business information related to healthcare providers, pharmaceutical companies, medical equipment suppliers and healthcare organizations.",
+    coverage:
+      "Hospitals, Pharma Companies, Medical Equipment, Healthcare Services",
   },
   {
     number: "04",
     title: "Banking & Finance",
     description:
-      "Support business research with structured company information across financial and professional service sectors.",
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85",
-    alt: "Modern financial district office buildings",
+      "Support business research with structured company information across financial institutions, banking services, insurance and professional financial organizations.",
+    coverage:
+      "Banking, Financial Services, Insurance, Investment Firms",
   },
   {
     number: "05",
-    title: "Real Estate",
+    title: "Real Estate & Construction",
     description:
-      "Explore relevant business information to support commercial property research and real estate prospecting.",
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85",
-    alt: "Commercial real estate office buildings",
+      "Explore business information to support commercial property research, construction industry prospecting and professional business development.",
+    coverage:
+      "Builders, Developers, Contractors, Construction Companies",
   },
   {
     number: "06",
-    title: "Logistics & Education",
+    title: "Logistics & Transportation",
     description:
-      "Organize business research across logistics, transportation, education and related business sectors.",
-    image:
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=85",
-    alt: "Logistics warehouse and supply chain operations",
+      "Find relevant business information across logistics, transportation, warehousing, freight and supply chain-related sectors.",
+    coverage:
+      "Transporters, Logistics Firms, Warehousing, Freight Services",
+  },
+  {
+    number: "07",
+    title: "Education",
+    description:
+      "Explore organizations across education, training, skill development and professional learning services for business research and outreach.",
+    coverage:
+      "Schools, Colleges, Universities, Training Institutes",
+  },
+  {
+    number: "08",
+    title: "Retail & E-commerce",
+    description:
+      "Understand retail and online business markets with company information that can support sales planning, distribution research and business development.",
+    coverage:
+      "Retailers, Distributors, E-commerce, Wholesale Businesses",
+  },
+];
+
+const sampleIndustryData = [
+  {
+    company: "Aarav Industrial Systems",
+    industry: "Manufacturing",
+    city: "Pune",
+    state: "Maharashtra",
+    region: "West India",
+    category: "Industrial Machinery",
+    employees: "100-250",
+  },
+  {
+    company: "Northstar Digital Solutions",
+    industry: "IT & Technology",
+    city: "Noida",
+    state: "Uttar Pradesh",
+    region: "North India",
+    category: "Software Development",
+    employees: "50-100",
+  },
+  {
+    company: "Medicare Life Sciences",
+    industry: "Healthcare",
+    city: "Ahmedabad",
+    state: "Gujarat",
+    region: "West India",
+    category: "Pharmaceuticals",
+    employees: "100-250",
+  },
+  {
+    company: "Pioneer Financial Services",
+    industry: "Banking & Finance",
+    city: "Mumbai",
+    state: "Maharashtra",
+    region: "West India",
+    category: "Financial Services",
+    employees: "50-100",
+  },
+  {
+    company: "UrbanBuild Developers",
+    industry: "Real Estate",
+    city: "Gurugram",
+    state: "Haryana",
+    region: "North India",
+    category: "Construction",
+    employees: "100-250",
+  },
+  {
+    company: "Eastline Logistics",
+    industry: "Logistics",
+    city: "Kolkata",
+    state: "West Bengal",
+    region: "East India",
+    category: "Transportation",
+    employees: "50-100",
+  },
+  {
+    company: "BrightPath Learning",
+    industry: "Education",
+    city: "Jaipur",
+    state: "Rajasthan",
+    region: "North India",
+    category: "Education & Training",
+    employees: "25-50",
+  },
+  {
+    company: "UrbanCart Retail",
+    industry: "Retail & E-commerce",
+    city: "Bengaluru",
+    state: "Karnataka",
+    region: "South India",
+    category: "Retail Distribution",
+    employees: "100-250",
+  },
+  {
+    company: "Southern Tech Systems",
+    industry: "IT & Technology",
+    city: "Chennai",
+    state: "Tamil Nadu",
+    region: "South India",
+    category: "IT Services",
+    employees: "50-100",
+  },
+  {
+    company: "Eastern Agro Industries",
+    industry: "Manufacturing",
+    city: "Bhubaneswar",
+    state: "Odisha",
+    region: "East India",
+    category: "Food Processing",
+    employees: "25-50",
+  },
+  {
+    company: "Greenway Healthcare",
+    industry: "Healthcare",
+    city: "Hyderabad",
+    state: "Telangana",
+    region: "South India",
+    category: "Healthcare Services",
+    employees: "100-250",
+  },
+  {
+    company: "MetroLink Distribution",
+    industry: "Retail & E-commerce",
+    city: "Delhi",
+    state: "Delhi",
+    region: "North India",
+    category: "Wholesale Distribution",
+    employees: "50-100",
+  },
+];
+
+const regions = [
+  {
+    name: "North India",
+    states: "Delhi, Uttar Pradesh, Haryana, Punjab, Rajasthan",
+  },
+  {
+    name: "South India",
+    states: "Karnataka, Tamil Nadu, Telangana, Kerala, Andhra Pradesh",
+  },
+  {
+    name: "East India",
+    states: "West Bengal, Odisha, Bihar, Jharkhand, Assam",
+  },
+  {
+    name: "West India",
+    states: "Maharashtra, Gujarat, Goa, Madhya Pradesh",
   },
 ];
 
@@ -80,8 +221,10 @@ export default function IndustriesPage() {
 
       {/* HERO SECTION */}
       <section className="industries-hero">
-        <div className="industries-hero-content">
-          <span className="tag">INDUSTRIES WE SERVE</span>
+        <div className="industries-hero-inner">
+          <span className="industries-tag">
+            INDUSTRIES WE SERVE
+          </span>
 
           <h1>
             Business Data Solutions
@@ -91,145 +234,249 @@ export default function IndustriesPage() {
 
           <p>
             Every industry has different business requirements.
-            Explore how structured B2B data solutions can support
-            company research, prospecting and business development
-            across different sectors.
+            Explore industry-focused B2B company information to
+            support business research, prospecting and sales
+            planning across India.
           </p>
 
-          <a href="/#contact" className="services-btn">
+          <a href="/contact" className="industries-btn">
             Discuss Your Industry Needs →
           </a>
         </div>
-
-        <div className="industries-hero-visual">
-          <img
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85"
-            alt="Modern commercial business buildings representing different industries"
-          />
-
-          <div className="industries-floating-card">
-            <strong>Industry Insights</strong>
-            <span>Business research & data solutions</span>
-          </div>
-        </div>
       </section>
 
-      {/* INTRO SECTION */}
+      {/* INTRODUCTION */}
       <section className="industries-intro">
-        <div>
-          <span className="tag">OUR INDUSTRY FOCUS</span>
+        <span className="industries-tag">
+          OUR INDUSTRY FOCUS
+        </span>
 
-          <h2>
-            Understanding Different Business Markets
-          </h2>
+        <h2>
+          Understanding Different Business Markets
+        </h2>
 
-          <p>
-            Business research becomes more useful when information
-            is organized around the right industry and market.
-            Our approach focuses on helping businesses explore
-            relevant company information based on their objectives.
-          </p>
+        <p>
+          Business research becomes more useful when information
+          is organized around the right industry and market.
+          Different businesses need different types of company
+          and professional information.
+        </p>
 
-          <p>
-            From manufacturing and technology to finance and
-            logistics, structured business data can support
-            research and sales planning across different sectors.
-          </p>
-        </div>
-
-        <img
-          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1000&q=85"
-          alt="Global digital business network connecting industries"
-          loading="lazy"
-        />
+        <p>
+          From manufacturing and technology to finance,
+          healthcare and logistics, our B2B data solutions
+          are designed to help businesses explore relevant
+          market segments and plan their outreach.
+        </p>
       </section>
 
       {/* INDUSTRY CARDS */}
       <section className="industries-list-section">
-        <span className="tag">EXPLORE INDUSTRIES</span>
+        <div className="industries-section-heading">
+          <span className="industries-tag">
+            EXPLORE INDUSTRIES
+          </span>
 
-        <h2>Industries We Support</h2>
+          <h2>Industries We Support</h2>
 
-        <p>
-          Explore business sectors where organized company
-          information can support research and business development.
-        </p>
+          <p>
+            Explore business sectors where organized company
+            information can support research and business
+            development.
+          </p>
+        </div>
 
         <div className="industries-grid">
           {industries.map((industry) => (
-            <article className="industry-card" key={industry.number}>
-              <div className="industry-image">
-                <img
-                  src={industry.image}
-                  alt={industry.alt}
-                  loading="lazy"
-                />
-                <span>{industry.number}</span>
+            <article
+              className="industry-card"
+              key={industry.number}
+            >
+              <div className="industry-card-top">
+                <span className="industry-number">
+                  {industry.number}
+                </span>
+                <span className="industry-line"></span>
               </div>
 
-              <div className="industry-content">
-                <h3>{industry.title}</h3>
-                <p>{industry.description}</p>
+              <h3>{industry.title}</h3>
 
-                <a href="/#contact">
-                  Discuss Your Requirements →
-                </a>
+              <p>{industry.description}</p>
+
+              <div className="industry-focus">
+                <strong>Industry Coverage</strong>
+                <span>{industry.coverage}</span>
               </div>
+
+              <a href="/contact">
+                Discuss Your Requirements →
+              </a>
             </article>
           ))}
         </div>
       </section>
 
-      {/* SOLUTIONS SECTION */}
-      <section className="industries-solutions">
-        <div className="industries-solutions-image">
-          <img
-            src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1000&q=85"
-            alt="Business team collaborating on market research"
-            loading="lazy"
-          />
-        </div>
-
-        <div className="industries-solutions-content">
-          <span className="tag">BUSINESS DATA SOLUTIONS</span>
+      {/* INDUSTRY-WISE SAMPLE DATA */}
+      <section className="industry-data-section">
+        <div className="industry-data-heading">
+          <span className="industries-tag">
+            INDUSTRY-WISE DATA
+          </span>
 
           <h2>
-            Data Solutions That Support Your Business Goals
+            Explore Business Data Across India
           </h2>
 
           <p>
-            Different industries need different types of business
-            information. Explore our solutions to understand how
-            structured data can support your requirements.
+            See how company information can be organized
+            by industry, city, state, region and business
+            category.
           </p>
+        </div>
 
-          <ul>
-            <li>B2B Contact Database</li>
-            <li>Business Data Solutions</li>
-            <li>Lead Generation</li>
-            <li>Data Enrichment</li>
-          </ul>
+        <div className="industry-data-notice">
+          Demonstration data only. All company names and
+          records below are fictional and are not verified
+          business listings.
+        </div>
 
-          <a href="/services" className="services-btn">
-            Explore Our Services →
-          </a>
+        <div className="industry-data-table-wrap">
+          <table className="industry-data-table">
+            <thead>
+              <tr>
+                <th>Company Name</th>
+                <th>Industry</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Region</th>
+                <th>Category</th>
+                <th>Employees</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {sampleIndustryData.map((item, index) => (
+                <tr key={index}>
+                  <td>{item.company}</td>
+                  <td>{item.industry}</td>
+                  <td>{item.city}</td>
+                  <td>{item.state}</td>
+                  <td>{item.region}</td>
+                  <td>{item.category}</td>
+                  <td>{item.employees}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <a href="/contact" className="industries-btn">
+          Request Industry-Wise Data →
+        </a>
+      </section>
+
+      {/* REGIONAL COVERAGE */}
+      <section className="industries-region-section">
+        <div className="industries-section-heading">
+          <span className="industries-tag">
+            INDIA-WIDE COVERAGE
+          </span>
+
+          <h2>Business Data by Region</h2>
+
+          <p>
+            Organize business research by geographical
+            market and regional requirements.
+          </p>
+        </div>
+
+        <div className="industries-region-grid">
+          {regions.map((region, index) => (
+            <article
+              className="industry-region-card"
+              key={region.name}
+            >
+              <span>
+                0{index + 1}
+              </span>
+
+              <h3>{region.name}</h3>
+
+              <p>{region.states}</p>
+
+              <a href="/contact">
+                Enquire About Data →
+              </a>
+            </article>
+          ))}
         </div>
       </section>
 
-      {/* CTA SECTION */}
+      {/* BUSINESS DATA SOLUTIONS */}
+      <section className="industries-solutions">
+        <span className="industries-tag">
+          BUSINESS DATA SOLUTIONS
+        </span>
+
+        <h2>
+          Data Solutions That Support Your Business Goals
+        </h2>
+
+        <p>
+          Different industries need different types of
+          business information. Choose a suitable data
+          solution based on your business objectives,
+          target audience and research requirements.
+        </p>
+
+        <div className="industries-solution-list">
+          <a href="/b2b-contact-database">
+            B2B Contact Database
+          </a>
+
+          <a href="/company-database">
+            Company Database
+          </a>
+
+          <a href="/lead-generation">
+            Lead Generation
+          </a>
+
+          <a href="/data-enrichment">
+            Data Enrichment
+          </a>
+
+          <a href="/exhibition-data">
+            Exhibition Data
+          </a>
+
+          <a href="/pricing">
+            Bulk Data Packages
+          </a>
+        </div>
+
+        <a href="/services" className="industries-btn">
+          Explore Our Services →
+        </a>
+      </section>
+
+      {/* FINAL CONTACT SECTION */}
       <section className="industries-cta">
-        <span className="tag">LET'S CONNECT</span>
+        <span className="industries-tag">
+          LET'S CONNECT
+        </span>
 
         <h2>
           Looking for Industry-Specific Business Data?
         </h2>
 
         <p>
-          Tell us about your industry and business requirements.
-          Let's explore a suitable data solution for your team.
+          Tell us about your industry, target market and
+          business requirements. Let's explore a suitable
+          data solution for your team.
         </p>
 
-        <a href="/#contact" className="services-btn">
+        <a href="/contact" className="industries-btn">
           Talk to Our Team →
         </a>
       </section>

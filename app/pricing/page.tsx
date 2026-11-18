@@ -1,17 +1,18 @@
 
 import type { Metadata } from "next";
+import "./pricing.css";
 
 export const metadata: Metadata = {
   title: "B2B Data Solutions Pricing | Best B2B Data Provider",
   description:
-    "Explore flexible pricing options for B2B contact database, lead generation and data enrichment solutions. Contact us for a custom business data quote.",
+    "Explore sample pricing packages for B2B contact databases, company databases, exhibition data, bulk business data and lead generation solutions.",
   alternates: {
     canonical: "/pricing",
   },
   openGraph: {
     title: "Pricing | Best B2B Data Provider",
     description:
-      "Find flexible business data solutions designed around your business requirements.",
+      "Explore flexible business data packages and custom pricing options.",
     url: "/pricing",
     type: "website",
   },
@@ -21,75 +22,169 @@ const plans = [
   {
     number: "01",
     name: "Starter",
-    subtitle: "For businesses getting started",
+    subtitle: "For small businesses",
+    price: "₹4,999",
+    quantity: "Up to 1,000 Records",
     description:
-      "A practical starting point for businesses exploring structured B2B data solutions.",
+      "A practical starting package for businesses exploring B2B company and contact data.",
     features: [
-      "Business data requirements discussion",
-      "Industry and audience research",
-      "Basic data organization support",
-      "Requirement-based recommendations",
+      "Up to 1,000 business records",
+      "Selected industry data",
+      "Company name and business category",
+      "City and state information",
+      "Excel / CSV format",
       "Email support",
     ],
-    button: "Get Started",
     featured: false,
   },
   {
     number: "02",
     name: "Growth",
-    subtitle: "For growing businesses",
+    subtitle: "For growing sales teams",
+    price: "₹12,999",
+    quantity: "Up to 5,000 Records",
     description:
-      "Flexible solutions for teams looking to strengthen their sales research and business outreach.",
+      "A flexible package for businesses looking to expand their prospecting and sales research.",
     features: [
-      "Everything in Starter",
-      "B2B contact database solutions",
-      "Lead generation support",
-      "Data enrichment assistance",
-      "Customized business requirements",
-      "Priority communication",
+      "Up to 5,000 business records",
+      "Industry-wise data selection",
+      "Company and contact information",
+      "City and state-wise segmentation",
+      "Excel / CSV delivery",
+      "Priority enquiry support",
     ],
-    button: "Explore Growth Plan",
     featured: true,
   },
   {
     number: "03",
-    name: "Enterprise",
-    subtitle: "For larger business requirements",
+    name: "Business",
+    subtitle: "For established businesses",
+    price: "₹24,999",
+    quantity: "Up to 10,000 Records",
     description:
-      "Customized business data solutions designed around specific organizational needs.",
+      "A larger data package for teams with wider business research and outreach requirements.",
     features: [
-      "Everything in Growth",
-      "Customized data requirements",
-      "Industry-focused research",
-      "Advanced data organization",
-      "Dedicated project discussion",
-      "Custom engagement options",
+      "Up to 10,000 business records",
+      "Multiple industry categories",
+      "Regional data segmentation",
+      "Company and professional details",
+      "Custom data requirements discussion",
+      "Dedicated project coordination",
     ],
-    button: "Contact Sales",
     featured: false,
+  },
+];
+
+const dataPackages = [
+  {
+    number: "01",
+    title: "B2B Contact Database",
+    description:
+      "Business contact information organized for industry research and professional outreach.",
+    records: "Starting from 1,000 records",
+    price: "₹4,999",
+    fields: "Company, contact, designation, city and state",
+  },
+  {
+    number: "02",
+    title: "Company Database",
+    description:
+      "Structured company information for market research, supplier discovery and business development.",
+    records: "Starting from 1,000 companies",
+    price: "₹3,999",
+    fields: "Company name, industry, address, city and state",
+  },
+  {
+    number: "03",
+    title: "Exhibition Data",
+    description:
+      "Exhibition-focused business information organized around events and participating industries.",
+    records: "Starting from 500 records",
+    price: "₹5,999",
+    fields: "Exhibition, company, industry and location",
+  },
+  {
+    number: "04",
+    title: "City & State-wise Data",
+    description:
+      "Explore company information based on selected cities, states and geographical regions.",
+    records: "Starting from 1,000 records",
+    price: "₹4,499",
+    fields: "Company, city, state, region and industry",
+  },
+];
+
+const bulkPackages = [
+  {
+    quantity: "5,000",
+    price: "₹12,999",
+    label: "Growth Package",
+    saving: "Sample bulk rate",
+  },
+  {
+    quantity: "10,000",
+    price: "₹22,999",
+    label: "Business Package",
+    saving: "Sample bulk rate",
+  },
+  {
+    quantity: "25,000",
+    price: "₹44,999",
+    label: "Professional Package",
+    saving: "Sample bulk rate",
+  },
+  {
+    quantity: "50,000+",
+    price: "Custom Quote",
+    label: "Enterprise Package",
+    saving: "Discuss volume pricing",
+  },
+];
+
+const regions = [
+  {
+    name: "North India",
+    locations: "Delhi, Haryana, Punjab, Uttar Pradesh, Rajasthan",
+  },
+  {
+    name: "South India",
+    locations: "Karnataka, Tamil Nadu, Telangana, Kerala, Andhra Pradesh",
+  },
+  {
+    name: "East India",
+    locations: "West Bengal, Odisha, Bihar, Jharkhand, Assam",
+  },
+  {
+    name: "West India",
+    locations: "Maharashtra, Gujarat, Goa, Madhya Pradesh",
   },
 ];
 
 const pricingFaqs = [
   {
-    question: "How is pricing determined?",
+    question: "How is the final pricing calculated?",
     answer:
-      "Pricing depends on your requirements, target industries, data scope and the services you need. Contact our team to discuss a suitable quote.",
+      "Pricing depends on record quantity, industry selection, geographical coverage, required fields and delivery requirements.",
   },
   {
-    question: "Can I request a customized plan?",
+    question: "Can I purchase industry-specific data?",
     answer:
-      "Yes. Businesses can discuss their specific requirements with our team to explore a customized solution.",
+      "Yes. You can discuss requirements for sectors such as manufacturing, IT, healthcare, finance, real estate, logistics and retail.",
   },
   {
-    question: "Do you offer B2B contact database solutions?",
+    question: "What formats are available?",
     answer:
-      "Yes. We offer business contact database solutions based on your industry, audience and business research requirements.",
+      "Data delivery can be discussed in Excel and CSV formats. Other requirements can be reviewed with the team.",
   },
   {
-    question: "How can I get a pricing quote?",
+    question: "Do you offer bulk data packages?",
     answer:
-      "You can reach out through our contact section with your requirements. Our team can discuss the scope and relevant pricing options.",
+      "Yes. Larger requirements can be discussed with the team for suitable volume-based pricing.",
+  },
+  {
+    question: "Can I request a customized package?",
+    answer:
+      "Yes. Contact the team with your target industry, location, quantity and required data fields to discuss a custom quote.",
   },
 ];
 
@@ -105,56 +200,55 @@ export default function PricingPage() {
           </span>
 
           <h1>
-            Business Data Solutions
-            <span> Built Around Your Needs.</span>
+            Business Data Packages
+            <span> For Every Business Need.</span>
           </h1>
 
           <p>
-            Every business has different data requirements.
-            Explore our service plans and find a solution
-            that aligns with your goals and business needs.
+            Explore flexible packages for company databases,
+            professional contact information, exhibition data
+            and bulk business data requirements across India.
           </p>
 
           <div className="pricing-hero-buttons">
             <a href="#plans" className="pricing-primary-btn">
-              Explore Plans →
+              Explore Packages →
             </a>
+
             <a href="/contact" className="pricing-secondary-btn">
-              Talk to Our Team
+              Request Custom Quote
             </a>
           </div>
-        </div>
 
-        <div className="pricing-hero-visual">
-          <img
-            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1100&auto=format&fit=crop&q=85"
-            alt="Business analytics dashboard showing data insights"
-          />
-
-          <div className="pricing-floating-card">
-            <span className="pricing-floating-icon">✦</span>
-            <div>
-              <strong>Flexible Solutions</strong>
-              <small>Designed around your needs</small>
-            </div>
+          <div className="pricing-hero-points">
+            <span>✓ Industry-wise Data</span>
+            <span>✓ City & State-wise Options</span>
+            <span>✓ Flexible Data Packages</span>
           </div>
         </div>
       </section>
 
-      {/* PLANS */}
+      {/* MAIN PLANS */}
       <section className="pricing-plans-section" id="plans">
         <div className="pricing-section-heading">
-          <span className="pricing-tag">OUR PLANS</span>
-          <h2>Choose Your Business Solution</h2>
+          <span className="pricing-tag">OUR PACKAGES</span>
+
+          <h2>Choose Your Business Data Plan</h2>
+
           <p>
-            Explore our service options and connect with
-            our team for pricing based on your requirements.
+            Start with a suitable package and discuss
+            additional requirements with our team.
           </p>
+        </div>
+
+        <div className="pricing-demo-note">
+          Sample pricing for website demonstration. Final prices
+          depend on data availability and confirmed requirements.
         </div>
 
         <div className="pricing-grid">
           {plans.map((plan) => (
-            <div
+            <article
               className={`pricing-card ${
                 plan.featured ? "pricing-featured" : ""
               }`}
@@ -162,12 +256,12 @@ export default function PricingPage() {
             >
               {plan.featured && (
                 <span className="pricing-popular">
-                  RECOMMENDED OPTION
+                  POPULAR PACKAGE
                 </span>
               )}
 
               <span className="pricing-number">
-                PLAN {plan.number}
+                PACKAGE {plan.number}
               </span>
 
               <h3>{plan.name}</h3>
@@ -177,25 +271,18 @@ export default function PricingPage() {
                 {plan.description}
               </p>
 
-              <div className="pricing-quote">
-                <strong>Custom Quote</strong>
-                <small>Based on your requirements</small>
+              <div className="pricing-price">
+                <strong>{plan.price}</strong>
+                <span>{plan.quantity}</span>
               </div>
 
-              <a
-                href="/contact"
-                className={
-                  plan.featured
-                    ? "pricing-plan-btn featured-btn"
-                    : "pricing-plan-btn"
-                }
-              >
-                {plan.button} →
+              <a href="/contact" className="pricing-plan-btn">
+                Get This Package →
               </a>
 
               <div className="pricing-divider"></div>
 
-              <h5>WHAT'S INCLUDED</h5>
+              <h5>PACKAGE INCLUDES</h5>
 
               <ul>
                 {plan.features.map((feature) => (
@@ -205,62 +292,163 @@ export default function PricingPage() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </article>
           ))}
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section className="pricing-services">
-        <div className="pricing-services-image">
-          <img
-            src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1000&auto=format&fit=crop&q=85"
-            alt="Business team discussing data and growth strategies"
-            loading="lazy"
-          />
-        </div>
+      {/* DATA-WISE PRICING */}
+      <section className="pricing-database-section">
+        <div className="pricing-section-heading">
+          <span className="pricing-tag">DATA-WISE PACKAGES</span>
 
-        <div className="pricing-services-content">
-          <span className="pricing-tag">
-            WHAT WE CAN HELP WITH
-          </span>
-
-          <h2>Solutions That Support Your Business Goals</h2>
+          <h2>Choose Data According to Your Requirements</h2>
 
           <p>
-            From business contact research to lead generation
-            and data enrichment, explore solutions that can
-            support your business development activities.
+            Select the type of business information that
+            matches your target audience and business goals.
           </p>
+        </div>
 
-          <div className="pricing-service-list">
-            <a href="/b2b-contact-database">
-              <span>01</span>
-              <div>
-                <strong>B2B Contact Database</strong>
-                <small>Explore business contact information</small>
-              </div>
-              <b>↗</b>
-            </a>
+        <div className="pricing-database-grid">
+          {dataPackages.map((item) => (
+            <article className="pricing-database-card" key={item.number}>
+              <span className="database-number">
+                {item.number}
+              </span>
 
-            <a href="/lead-generation">
-              <span>02</span>
-              <div>
-                <strong>Lead Generation</strong>
-                <small>Discover relevant business prospects</small>
-              </div>
-              <b>↗</b>
-            </a>
+              <h3>{item.title}</h3>
 
-            <a href="/data-enrichment">
-              <span>03</span>
-              <div>
-                <strong>Data Enrichment</strong>
-                <small>Improve and organize business data</small>
+              <p>{item.description}</p>
+
+              <div className="database-detail">
+                <span>Package Size</span>
+                <strong>{item.records}</strong>
               </div>
-              <b>↗</b>
-            </a>
-          </div>
+
+              <div className="database-detail">
+                <span>Included Fields</span>
+                <strong>{item.fields}</strong>
+              </div>
+
+              <div className="database-price">
+                <span>Sample Starting Price</span>
+                <strong>{item.price}</strong>
+              </div>
+
+              <a href="/contact">
+                Enquire Now →
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* BULK PACKAGES */}
+      <section className="pricing-bulk-section">
+        <div className="pricing-section-heading">
+          <span className="pricing-tag">SPECIAL BULK PACKAGES</span>
+
+          <h2>More Data. Better Volume Pricing.</h2>
+
+          <p>
+            Explore sample bulk data package options for
+            businesses with larger data requirements.
+          </p>
+        </div>
+
+        <div className="pricing-bulk-note">
+          Bulk prices shown are illustrative examples, not confirmed offers.
+        </div>
+
+        <div className="pricing-bulk-grid">
+          {bulkPackages.map((item) => (
+            <article className="pricing-bulk-card" key={item.quantity}>
+              <span>{item.label}</span>
+
+              <h3>{item.quantity}</h3>
+
+              <small>Records</small>
+
+              <strong className="bulk-price">
+                {item.price}
+              </strong>
+
+              <p>{item.saving}</p>
+
+              <a href="/contact">
+                Get Bulk Quote →
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* REGIONAL DATA */}
+      <section className="pricing-region-section">
+        <div className="pricing-section-heading">
+          <span className="pricing-tag">INDIA-WIDE COVERAGE</span>
+
+          <h2>Choose Data by Region</h2>
+
+          <p>
+            Discuss your geographical requirements for
+            region-wise company and business data.
+          </p>
+        </div>
+
+        <div className="pricing-region-grid">
+          {regions.map((region, index) => (
+            <article className="pricing-region-card" key={region.name}>
+              <span>0{index + 1}</span>
+
+              <h3>{region.name}</h3>
+
+              <p>{region.locations}</p>
+
+              <a href="/contact">
+                Request Regional Data →
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* DELIVERY */}
+      <section className="pricing-delivery-section">
+        <span className="pricing-tag">DATA DELIVERY OPTIONS</span>
+
+        <h2>Simple Data Delivery for Your Team</h2>
+
+        <p>
+          Discuss the preferred format and data fields
+          before confirming your business data package.
+        </p>
+
+        <div className="pricing-delivery-grid">
+          <article>
+            <strong>Excel Format</strong>
+            <p>
+              Organized spreadsheet data for sorting,
+              filtering and internal business research.
+            </p>
+          </article>
+
+          <article>
+            <strong>CSV Format</strong>
+            <p>
+              Structured records suitable for data
+              management and compatible business tools.
+            </p>
+          </article>
+
+          <article>
+            <strong>Custom Requirements</strong>
+            <p>
+              Discuss selected industries, regions,
+              record quantities and required fields.
+            </p>
+          </article>
         </div>
       </section>
 
@@ -268,20 +456,24 @@ export default function PricingPage() {
       <section className="pricing-faq-section">
         <div className="pricing-section-heading">
           <span className="pricing-tag">COMMON QUESTIONS</span>
+
           <h2>Frequently Asked Questions</h2>
+
           <p>
-            Find answers to common questions about our
-            business data solutions and pricing.
+            Find answers to common questions about
+            business data packages and pricing.
           </p>
         </div>
 
         <div className="pricing-faq-grid">
           {pricingFaqs.map((faq, index) => (
-            <div className="pricing-faq-card" key={faq.question}>
+            <article className="pricing-faq-card" key={faq.question}>
               <span>0{index + 1}</span>
+
               <h3>{faq.question}</h3>
+
               <p>{faq.answer}</p>
-            </div>
+            </article>
           ))}
         </div>
       </section>
@@ -290,13 +482,12 @@ export default function PricingPage() {
       <section className="pricing-cta">
         <span className="pricing-tag">LET'S DISCUSS</span>
 
-        <h2>
-          Looking for the Right Data Solution?
-        </h2>
+        <h2>Need a Customized Business Data Package?</h2>
 
         <p>
-          Tell us about your business requirements.
-          Let's discuss a suitable solution for your goals.
+          Tell us about your target industry, location,
+          required records and budget. Our team can
+          discuss a suitable package with you.
         </p>
 
         <a href="/contact" className="pricing-primary-btn">

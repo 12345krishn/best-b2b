@@ -1,102 +1,111 @@
-
 "use client";
 
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setSubmitted(true);
   }
 
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
-      <div className="contact-form-row">
-        <label>
-          Full Name *
-          <input
-            type="text"
-            name="name"
-            placeholder="Enter your full name"
-            required
-          />
-        </label>
-
-        <label>
-          Company Name
-          <input
-            type="text"
-            name="company"
-            placeholder="Your company name"
-          />
-        </label>
-      </div>
-
-      <div className="contact-form-row">
-        <label>
-          Business Email *
-          <input
-            type="email"
-            name="email"
-            placeholder="name@company.com"
-            required
-          />
-        </label>
-
-        <label>
-          Phone Number
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Enter phone number"
-          />
-        </label>
-      </div>
-
       <label>
-        Interested In *
-        <select name="service" required defaultValue="">
-          <option value="" disabled>
-            Select a service
-          </option>
-          <option value="B2B Contact Database">
-            B2B Contact Database
-          </option>
-          <option value="Lead Generation">Lead Generation</option>
-          <option value="Data Enrichment">Data Enrichment</option>
-          <option value="Business Data Solutions">
-            Business Data Solutions
-          </option>
-          <option value="Other">Other</option>
-        </select>
-      </label>
-
-      <label>
-        Your Message *
-        <textarea
-          name="message"
-          rows={5}
-          placeholder="Tell us about your business requirements..."
+        Name: <span>*</span>
+        <input
+          type="text"
+          name="name"
+          placeholder="Enter your name"
           required
         />
       </label>
 
-      <button type="submit" className="contact-submit-btn">
-        Submit Enquiry <span>→</span>
-      </button>
+      <label>
+        E-mail: <span>*</span>
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter your business email"
+          required
+        />
+      </label>
+
+      <label>
+        Mobile No: <span>*</span>
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Enter your mobile number"
+          required
+        />
+      </label>
+
+      <label>
+        Enquiry: <span>*</span>
+        <textarea
+          name="message"
+          rows={3}
+          placeholder="Tell us about your data requirements"
+          required
+        />
+      </label>
+
+      <label>
+        Interested In:
+        <select name="service" defaultValue="">
+          <option value="" disabled>
+            Select your requirement
+          </option>
+          <option value="B2B Contact Database">B2B Contact Database</option>
+          <option value="Company Database">Company Database</option>
+          <option value="Professional Contact Database">
+            Professional Contact Database
+          </option>
+          <option value="Exhibition Data">Exhibition Data</option>
+          <option value="Lead Generation">Lead Generation</option>
+          <option value="Data Enrichment">Data Enrichment</option>
+          <option value="City and State Wise Data">
+            City & State Wise Data
+          </option>
+          <option value="Bulk Data Package">Bulk Data Package</option>
+          <option value="Other">Other</option>
+        </select>
+      </label>
+
+      <div className="contact-verification">
+        <strong>Verification:</strong>
+        <span className="verification-code">B2B26</span>
+        <input
+          type="text"
+          name="verification"
+          placeholder="Enter code"
+          aria-label="Enter verification code"
+        />
+      </div>
+
+      <div className="contact-form-buttons">
+        <button type="submit">SUBMIT</button>
+        <button
+          type="reset"
+          className="contact-reset-btn"
+          onClick={() => setSubmitted(false)}
+        >
+          RESET
+        </button>
+      </div>
 
       {submitted && (
         <p className="contact-success-message" role="status">
-          Thank you! Your form is working in demo mode. Email submission will
-          be enabled after backend integration.
+          Thank you for your enquiry. This form is currently in demo mode;
+          your details have not been sent.
         </p>
       )}
 
-      <small className="contact-form-note">
-        Your information is requested to understand your business enquiry.
-      </small>
+      <p className="contact-form-note">
+        Your information will be used to understand your business enquiry.
+      </p>
     </form>
   );
 }
