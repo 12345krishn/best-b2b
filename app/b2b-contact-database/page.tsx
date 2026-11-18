@@ -2,289 +2,252 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "B2B Contact Database India | Best B2B Data Provider",
+  title: "Professional Contact Database India | Best B2B Data Provider",
   description:
-    "Explore B2B contact database solutions in India. Find relevant business information to support sales, marketing and business research.",
+    "Explore professional contact database solutions in India. Find business professionals by company, industry, designation and other available business details.",
   alternates: {
     canonical: "/b2b-contact-database",
   },
-  openGraph: {
-    title: "B2B Contact Database India | Best B2B Data Provider",
-    description:
-      "Explore structured business contact and company information solutions for sales, marketing and business research.",
-    url: "/b2b-contact-database",
-    type: "website",
-  },
 };
 
-const databaseFeatures = [
+const contactFeatures = [
   {
-    number: "01",
-    title: "Company Information",
+    title: "Professional Information",
     description:
-      "Explore company-level information to support business research, market understanding and prospect identification.",
-    icon: "🏢",
+      "Explore available professional details such as names, job designations and company associations.",
   },
   {
-    number: "02",
-    title: "Business Contacts",
+    title: "Company Association",
     description:
-      "Find relevant business contact information for your prospecting and professional outreach requirements.",
-    icon: "👥",
+      "Organize professional information according to relevant companies and business categories.",
   },
   {
-    number: "03",
-    title: "Sales Research",
+    title: "Industry-Based Research",
     description:
-      "Support your sales team with organized business information and structured research workflows.",
-    icon: "📊",
+      "Explore professional contact information across relevant industries and business segments.",
   },
   {
-    number: "04",
-    title: "Structured Data",
+    title: "Business Contact Details",
     description:
-      "Work with organized business records that make information easier to review, manage and understand.",
-    icon: "🗄️",
+      "Access available business contact fields according to your selected requirements.",
   },
 ];
 
-const dataProcess = [
+const deliveryOptions = [
   {
-    number: "01",
-    title: "Data Collection",
+    title: "Excel / CSV Format",
     description:
-      "Identify relevant business information according to your research requirements.",
+      "Receive structured professional contact information in spreadsheet formats for business research and analysis.",
   },
   {
-    number: "02",
-    title: "Data Organization",
+    title: "Database / API",
     description:
-      "Arrange available information into structured and understandable business records.",
-  },
-  {
-    number: "03",
-    title: "Data Enrichment",
-    description:
-      "Improve existing records by organizing and adding relevant available company information.",
+      "Discuss database or API-based delivery options for your business data requirements.",
   },
 ];
 
-export default function B2BContactDatabasePage() {
+const faqs = [
+  {
+    question: "What is a professional contact database?",
+    answer:
+      "A professional contact database is an organized collection of business professional information, such as names, designations, company associations and available business contact details.",
+  },
+  {
+    question: "Does the database cover India?",
+    answer:
+      "Our website is focused on business data requirements in India. Share your target locations and requirements with us to discuss availability.",
+  },
+  {
+    question: "Which delivery formats are available?",
+    answer:
+      "Excel, CSV and database or API-based delivery options can be discussed according to your requirements.",
+  },
+  {
+    question: "Can I request specific industries or designations?",
+    answer:
+      "Yes. You can mention your target industry, location, company type and professional designations in your enquiry. Availability will need to be confirmed.",
+  },
+];
+
+export default function ProfessionalContactDatabasePage() {
   return (
-    <main className="database-page-premium">
+    <main className="product-page contact-database-page">
+      <section className="product-hero">
+        <div className="product-container product-hero-grid">
+          <div className="product-hero-content">
+            <span className="product-eyebrow">
+              PROFESSIONAL BUSINESS INFORMATION · INDIA
+            </span>
 
-      {/* HERO SECTION */}
+            <h1>
+              Professional Contact Database
+              <span> for Indian Businesses</span>
+            </h1>
 
-      <section className="database-hero">
-        <div className="database-hero-content">
-          <span className="tag">B2B DATA SOLUTIONS</span>
+            <p>
+              Explore organized professional information to support B2B
+              research, target market identification and business development.
+              Discuss your requirements by industry, location and designation.
+            </p>
 
-          <h1>
-            B2B Contact Database
-            <br />
-            <span>Built for Better Business Insights</span>
-          </h1>
+            <div className="product-actions">
+              <a href="/contact" className="product-btn">
+                Send an Enquiry →
+              </a>
+              <a href="/services" className="product-outline-btn">
+                Explore Services
+              </a>
+            </div>
 
-          <p>
-            Discover business contact and company information
-            to support your sales, marketing and business
-            development activities across India.
-          </p>
-
-          <div className="database-hero-buttons">
-            <a href="/#contact" className="services-btn">
-              Get in Touch →
-            </a>
-            <a href="/services" className="database-secondary-btn">
-              Explore Services
-            </a>
-          </div>
-
-          <div className="database-hero-points">
-            <span>✓ Structured Business Information</span>
-            <span>✓ Research-Focused Solutions</span>
-          </div>
-        </div>
-
-        <div className="database-hero-visual">
-          <img
-            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=85"
-            alt="Enterprise server racks inside a modern data center"
-            fetchPriority="high"
-          />
-
-          <div className="database-floating-card database-server-card">
-            <span className="database-status-dot"></span>
-            <div>
-              <small>DATA INFRASTRUCTURE</small>
-              <strong>Connected Systems</strong>
+            <div className="product-highlights">
+              <span>✓ India-focused requirements</span>
+              <span>✓ Excel / CSV options</span>
+              <span>✓ Database / API options</span>
             </div>
           </div>
 
-          <div className="database-floating-card database-network-card">
-            <span className="database-network-icon">⌘</span>
-            <div>
-              <small>BUSINESS DATA</small>
-              <strong>Organized Information</strong>
-            </div>
+          <div className="product-hero-visual">
+            <img
+              src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85"
+              alt="Business professionals working together"
+            />
           </div>
         </div>
       </section>
 
-      {/* INTRODUCTION SECTION */}
-
-      <section className="database-intro">
-        <div className="database-intro-image">
-          <img
-            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1100&q=85"
-            alt="Electronic circuit board representing digital data technology"
-            loading="lazy"
-          />
-          <div className="database-image-label">
-            <span>DATA TECHNOLOGY</span>
-            <strong>Information. Structure. Insights.</strong>
-          </div>
-        </div>
-
-        <div className="database-intro-content">
-          <span className="tag">OUR SOLUTION</span>
-
-          <h2>Find the Right Business Information</h2>
-
-          <p>
-            A structured B2B contact database can help businesses
-            research potential customers, identify relevant
-            companies and organize their prospecting activities.
-          </p>
-
-          <p>
-            Our solutions are designed to support business teams
-            looking for useful company and contact information
-            through organized business data.
-          </p>
-
-          <a href="/#contact" className="database-text-link">
-            Discuss Your Requirements →
-          </a>
-        </div>
-      </section>
-
-      {/* DATABASE FEATURES */}
-
-      <section className="database-features-section">
-        <div className="database-section-heading">
-          <span className="tag">DATABASE CAPABILITIES</span>
-          <h2>Business Information That Supports Your Workflow</h2>
-          <p>
-            Explore different types of business information
-            that can support your research and prospecting activities.
-          </p>
-        </div>
-
-        <div className="database-grid">
-          {databaseFeatures.map((feature) => (
-            <article className="database-card" key={feature.number}>
-              <div className="database-card-top">
-                <span className="database-feature-icon">
-                  {feature.icon}
-                </span>
-                <span className="database-feature-number">
-                  {feature.number}
-                </span>
-              </div>
-
-              <h3>{feature.title}</h3>
-              <p>{feature.description}</p>
-
-              <div className="database-card-line"></div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      {/* TECHNOLOGY SECTION */}
-
-      <section className="database-tech-section">
-        <div className="database-tech-content">
-          <span className="tag">TECHNOLOGY & DATA</span>
-
+      <section className="product-section">
+        <div className="product-container product-intro">
+          <span className="product-eyebrow">ABOUT THE DATABASE</span>
           <h2>
-            Organized Data for Smarter Business Decisions
+            Find Relevant <span>Business Professionals</span>
           </h2>
-
           <p>
-            Business information becomes more useful when it is
-            organized, accessible and aligned with your objectives.
-            A structured data approach can help teams understand
-            information and manage their research more effectively.
+            Professional contact information can help businesses understand
+            their target audience and organize prospect research. Our
+            professional contact database offering is designed around
+            business-specific requirements in India.
           </p>
-
-          <ul>
-            <li>Structured business records</li>
-            <li>Organized company information</li>
-            <li>Business research support</li>
-            <li>Data enrichment workflows</li>
-          </ul>
-
-          <a href="/data-enrichment" className="services-btn">
-            Explore Data Enrichment →
-          </a>
         </div>
+      </section>
 
-        <div className="database-tech-visual">
-          <img
-            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=85"
-            alt="Global digital network representing connected business data systems"
-            loading="lazy"
-          />
+      <section className="product-section product-light">
+        <div className="product-container">
+          <div className="product-section-heading">
+            <span className="product-eyebrow">DATABASE INFORMATION</span>
+            <h2>Explore Available Information Categories</h2>
+            <p>
+              The information fields depend on the selected database and
+              confirmed availability.
+            </p>
+          </div>
 
-          <div className="database-tech-overlay">
-            <span>DATA CONNECTIVITY</span>
-            <strong>Connecting Business Information</strong>
+          <div className="product-card-grid">
+            {contactFeatures.map((item, index) => (
+              <article className="product-info-card" key={item.title}>
+                <span className="product-number">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* PROCESS SECTION */}
+      <section className="product-section">
+        <div className="product-container">
+          <div className="product-section-heading">
+            <span className="product-eyebrow">DATA DELIVERY</span>
+            <h2>Choose a Suitable Data Format</h2>
+            <p>
+              Discuss the most suitable delivery method for your business
+              workflow.
+            </p>
+          </div>
 
-      <section className="database-process-section">
-        <div className="database-section-heading">
-          <span className="tag">HOW IT WORKS</span>
-          <h2>A Structured Approach to Business Data</h2>
-          <p>
-            Explore a simple approach to organizing business
-            information around your requirements.
-          </p>
-        </div>
-
-        <div className="database-process-grid">
-          {dataProcess.map((step) => (
-            <article className="database-process-card" key={step.number}>
-              <span>{step.number}</span>
-              <h3>{step.title}</h3>
-              <p>{step.description}</p>
-            </article>
-          ))}
+          <div className="product-delivery-grid">
+            {deliveryOptions.map((item) => (
+              <article className="product-delivery-card" key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                <a href="/contact">Discuss Your Requirements →</a>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* CTA SECTION */}
+      <section className="product-section product-light">
+        <div className="product-container product-process">
+          <div>
+            <span className="product-eyebrow">HOW IT WORKS</span>
+            <h2>Discuss Your Professional Data Requirements</h2>
+            <p>
+              Tell us what type of professionals you want to research.
+              We can discuss the relevant requirements and available options.
+            </p>
+          </div>
 
-      <section className="database-cta">
-        <span className="tag">LET'S CONNECT</span>
-
-        <h2>Looking for the Right Business Data Solutions?</h2>
-
-        <p>
-          Tell us about your requirements and connect with our team
-          to explore suitable B2B data solutions.
-        </p>
-
-        <a href="/#contact" className="services-btn">
-          Contact Our Team →
-        </a>
+          <div className="product-steps">
+            <div>
+              <span>01</span>
+              <section>
+                <h3>Share Your Requirements</h3>
+                <p>Specify your target industry, location and designations.</p>
+              </section>
+            </div>
+            <div>
+              <span>02</span>
+              <section>
+                <h3>Discuss Data Availability</h3>
+                <p>Review the requested information fields and availability.</p>
+              </section>
+            </div>
+            <div>
+              <span>03</span>
+              <section>
+                <h3>Confirm Delivery Options</h3>
+                <p>Discuss Excel, CSV, database or API delivery requirements.</p>
+              </section>
+            </div>
+          </div>
+        </div>
       </section>
 
+      <section className="product-section">
+        <div className="product-container">
+          <div className="product-section-heading">
+            <span className="product-eyebrow">COMMON QUESTIONS</span>
+            <h2>Professional Contact Database FAQs</h2>
+          </div>
+
+          <div className="product-faq-list">
+            {faqs.map((faq) => (
+              <details key={faq.question}>
+                <summary>{faq.question}</summary>
+                <p>{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="product-cta">
+        <div className="product-container product-cta-inner">
+          <div>
+            <span className="product-eyebrow">LET'S CONNECT</span>
+            <h2>Looking for Professional Contact Information?</h2>
+            <p>
+              Share your business requirements and discuss suitable database
+              options with our team.
+            </p>
+          </div>
+          <a href="/contact" className="product-btn product-btn-white">
+            Contact Us →
+          </a>
+        </div>
+      </section>
     </main>
   );
 }
